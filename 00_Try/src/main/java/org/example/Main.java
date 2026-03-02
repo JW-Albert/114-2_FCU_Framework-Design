@@ -5,15 +5,21 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         // 建立物件
-        Car myCar = new Car("Toyota", "紅色");
+        Car myCar = new Car("Toyota", "紅色" ,0);
 
         // 呼叫物件的方法
         myCar.displayInfo();
+        myCar.accelerate();
+        myCar.displayInfo();
+        System.out.println(myCar.getBrand());
+        myCar.setBrand("BMW");
+        myCar.displayInfo();
+
 
         ArrayList<Car> myCars= new ArrayList<>();
-        myCars.add(new Car("BMW", "Black"));
-        myCars.add(new Car("Benz", "White"));
-        myCars.add(new Car("Totoya", "White"));
+        myCars.add(new Car("BMW", "Black" ,0));
+        myCars.add(new Car("Benz", "White" ,0));
+        myCars.add(new Car("Totoya", "White" ,0));
 
         // For-Loop
         System.out.println("\n");
